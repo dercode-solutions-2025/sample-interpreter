@@ -12,16 +12,24 @@ def tokenize(code):
 		if func == "input":
 			input(arg)
 	if '=' in code:
+		mode = "VAR"
 		code = code.split('=')
-		tokens.append(code)
+		ast = (mode, code)
+		tokens.append(ast)
 		# x = 10 would return ['x', '10'']
+		# since i made it a tuple, it returns: ("VAR", ['x', '10'])
 	if 'func' in code:
 		# expects a function, such as: func myfunc arg1 arg2 | print arg1 + arg2
+		mode = "FUNC"
 		code = code.split('|')
-		definition = code[0]
-		definition.split()
-		vals = code[1]
-		vals.split()
-		tokens.append(definition)
-		tokens.append(vals)
-	return tokensdef
+		sect1 = code[0]
+		sect2 = code[1]
+		funcname = sect1[1]
+		if len(sect1) == 2:
+			ast = (mode, funcname, sect2)
+			tokens.append(ast)
+		elif len(sect1) == 3:
+			args = sect1[2:]
+			ast = (mode, funcname, args, sect2)
+			tokens.append(ast)
+	return tokens
