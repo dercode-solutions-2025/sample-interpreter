@@ -1,0 +1,5 @@
+func%arg%arg1, add, =, print, arg+arg1
+func%arg%arg1, sub, =, print, arg-arg1
+func%arg%arg1, mult, =, print, arg*arg1
+func%arg%arg1, div, =, print, arg/arg1
+call, add, 1%1
