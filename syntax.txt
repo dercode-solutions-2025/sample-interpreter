@@ -1,0 +1,11 @@
+Okay, so this was a big learning project to me. I took your word Elliot, and tried to make a simple interpreter in Python.
+Before I start with this, ';' is used as a delimiter which makes it way easier for the tokenizer to execute line by line, which is similar to what C uses. Some syntax uses percent marks for delimiters for what is supposed to be nested blocks, such as functions. This was a huge project, and I appreciate you for not insulting me, like all other commenters. Also, in each file, there are heavy amounts of comments to explain what it does, for other programmers. Without further ado, let's get started.
+
+print, "Text";
+input, "Text";
+x = 10;
+// I love C family comments;
+func%mult%arg%arg1, =, print, 1+2;
+call, mult;
+
+Technically, all of the above should be working code by the time I'm done with this.
