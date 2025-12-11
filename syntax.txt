@@ -5,7 +5,8 @@ print, "Text";
 input, "Text";
 x = 10;
 // I love C family comments;
-func%mult%arg%arg1, =, print, 1+2;
+func%mult%arg%arg1%=% print% arg*arg1;
 call, mult;
-
+import, arithmetic
+arithmetic.mult.1.2
 Technically, all of the above should be working code by the time I'm done with this.
