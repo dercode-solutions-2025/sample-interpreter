@@ -1,3 +1,6 @@
+from parser import vars
+global tokens
+global mode
 def tokenize(code):
 	code = code.strip()
 	tokens = []
@@ -6,6 +9,9 @@ def tokenize(code):
 		code = code.strip().split(',')
 		tokens.append(code)
 		if func == "print":
+			if "$$" in code:
+				code = code.replace("$$", "")
+				print(vars.get(var))
 			# I don't really care if there are quotes or not: it doesn't stop the execution so...
 			# I should handle printing and input - basic functions - right here because it's easier
 			print(arg)
